@@ -1,9 +1,22 @@
-import React from 'react'
+import { clients } from "../constants"
+import styles from "../style"
+import FeedbackCard from './FeedbackCard';
 
-const Client = () => {
-  return (
-    <div>Client</div>
-  )
-}
 
-export default Client
+const Clients = () => (
+
+  <section className={`${styles.flexCenter} my-4`}>
+    <div className={`${styles.flexCenter} flex-wrap w-full`}>
+      {clients.map((client) => (
+        <div key={client.id} className={`flex-1 ${styles.flexCenter} sm:min-w-[193px] min-w-[120px] hover:scale-110 transition duration-300 ease-in-out`}>
+          <img src={client.logo} alt="client" className="sm: w-[193px] w-[100px] object-contain"/>
+
+        </div>
+
+      ))}
+    </div>
+  </section>
+)
+
+
+export default Clients
