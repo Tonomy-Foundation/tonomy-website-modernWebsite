@@ -1,6 +1,6 @@
 import { clients } from "../constants"
 import styles from "../style"
-import FeedbackCard from './FeedbackCard';
+
 
 
 const Clients = () => (
